@@ -1,0 +1,2 @@
+### Closed Cylinders
+These cylinders have a closed end and are used as container lids. They can nest inside each other for compact storage and transportation. The closed cylindrical design allows for efficient stacking and space-saving when not in use as lids.
