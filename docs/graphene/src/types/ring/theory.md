@@ -1,12 +1,5 @@
 ## Deep and Shallow Sea
 
-https://ship.ee/wave_energy/theoretical-foundations/
-
-
-
-
-## Deep and Shallow Sea
-
 The ocean holds vast expanses of space, and positioning vessels there comes at no cost. For instance, land in New York may cost $25,000 per square meter, but just 300 meters offshore, you can station vessels of any size, even those as large as skyscrapers, for free.
 
 Why is it so challenging to create a floating city or island in the sea, despite numerous conceptual designs? The primary issue lies in the fact that a floating island, even one of considerable size, will sway with the waves if it's not anchored to the seabed.
@@ -87,16 +80,11 @@ The amplitude of a wave decreases with depth due to the diminishing effect of wa
 \[ A(z) = A_0 e^{-kz} \]
 where \( A(z) \) is the amplitude at depth \( z \), \( A_0 \) is the surface amplitude, and \( k \) is the wave number. This illustrates that wave effects are most pronounced near the surface and decrease significantly with depth.
 
-
-
 #### Breaking and Energy
 When waves transition to shallow water, their kinetic energy converts to potential energy, increasing wave height. Upon breaking, significant energy is released, causing coastal erosion and sediment transport. Breaking waves form a foamy front, enhancing their impact on the shore.
 
 #### Friction and Seabed Influence
 In shallow water, friction with the seabed slows and deforms waves. Particle motion becomes elliptical, transferring energy from depth to the surface, leading to increased wave energy until breaking.
-
-For more details, visit the original [theoretical foundations](https://ship.ee/wave_energy/theoretical-foundations/).
-
 
 ### Impact of Depth on Wave Energy
 In deeper water, waves travel faster and with more energy. As waves move into shallower water, their energy is compressed, increasing wave height until they break.

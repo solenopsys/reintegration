@@ -33,4 +33,5 @@ async function genMd(dir: string, name: string) {
 const dir = "../../../docs";
 
 await genMd(dir, "graphene");
+await genMd(dir, "converged");
  
