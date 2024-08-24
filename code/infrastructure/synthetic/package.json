@@ -1,0 +1,23 @@
+{
+  "name": "@solenopsys/synthetic",
+  "version": "1.0.0",
+  "author": "Alex Storm",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.5",
+    "@types/node": "^20.4.10",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "description": "Shockwave deployment controll",
+  "license": "ISC",
+  "scripts": {
+    "start": "bun ./src/auto.ts"
+  },
+  "type": "module",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

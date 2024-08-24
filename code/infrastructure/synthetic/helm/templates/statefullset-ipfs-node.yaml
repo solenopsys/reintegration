@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: ipfs-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ipfs-node
+  serviceName: ipfs-node
+  template:
+    metadata:
+      labels:
+        app: ipfs-node
+    spec:
+      containers:
+        - name: kubo
+          image: ipfs/kubo
+          env:
+            LIBP2P_FORCE_PNET: '1'
+          ports:
+            - name: gateway
+              port: 8080
+            - name: rpc
+              port: 5001
+            - name: p2p
+              port: 4001
+          volumeMounts:
+            - name:
+                name: staging
+              mountPath: /export
+            - name:
+                name: data
+              mountPath: ' /data/ipfs'
+      volumes: []
+  volumeClaimTemplates: []

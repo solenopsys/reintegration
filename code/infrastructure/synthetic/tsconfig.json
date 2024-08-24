@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@solenopsys/synthetic": ["./src/index.ts"]
+      },
+      "target": "ESNext",
+      "module": "CommonJS",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "verbatimModuleSyntax":false,
+      "forceConsistentCasingInFileNames": true
+    }
+  }

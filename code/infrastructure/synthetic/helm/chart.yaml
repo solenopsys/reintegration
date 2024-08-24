@@ -1,0 +1,6 @@
+apiVersion: v2
+name: ipfs-node
+version: 0.1.39
+description: IPFS node
+icon: /icons/ipfs-node.svg
+appVersion: 1.0.0

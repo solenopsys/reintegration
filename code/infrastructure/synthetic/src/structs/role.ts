@@ -1,0 +1,13 @@
+
+export type RoleType = {
+    apiVersion: 'rbac.authorization.k8s.io/v1';
+    kind: 'Role';
+    metadata: {
+        name: string;
+    };
+    rules: {
+        apiGroups?: string[];
+        resources?: string[];
+        verbs?: string[];
+    }[];
+}

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ipfs-bootstrap
+data:
+  bootstrap.sh: |-
+    #!/bin/sh
+    set -ex
+    ipfs bootstrap rm all
+    ipfs bootstrap add "/dns4/ipfs-node-alpha.default.svc.cluster.local/tcp/4001/p2p/12D3KooWL2A1zj6oqVSRtanyZGDwJaEApxcg1JDAaCRbLayQ3aFd"
+    ipfs bootstrap add "/dns4/ipfs-node-bravo.default.svc.cluster.local/tcp/4001/p2p/12D3KooWHQNAJ2iLFFxpvH9YwE4r9MVMrYoQ9YxiVGY5L3qTJi1w"
+    ipfs bootstrap add "/dns4/ipfs-node-charlie.default.svc.cluster.local/tcp/4001/p2p/12D3KooWCG8XDMrBD8dSpEhoUhVUxAoGh3akYPVXFzKYVJ22yzQK"
+    ipfs config Routing --json '{ "Type": "dhtclient" }' 

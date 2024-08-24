@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: swarm-key
+data:
+  swarm.key: |-
+    /key/swarm/psk/1.0.0/
+    /base16/
+    0472d6ec079252b82ba680c6b0e811c529d2dfa99f92cb7d13b5ad560ae10d7c

@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ipfs-node
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    cert-manager.io/cluster-issuer: zerossl-production
+    cert-manager.io/acme-challenge-type: dns01
+    cert-manager.io/acme-dns01-provider: route53
+    ingress.kubernetes.io/force-hsts: 'true'
+    ingress.kubernetes.io/hsts-preload: 'true'
+    ingress.kubernetes.io/ssl-redirect: 'true'
+    ingress.kubernetes.io/enable-cors: 'true'
+spec:
+  tls:
+    - hosts:
+        - ipfs.solenopsys.org
+      secretName: ssl-secret-ipfs-solenopsys-org
+  rules:
+    - host: ipfs-node
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ipfs-node
+                port:
+                  number: 8080

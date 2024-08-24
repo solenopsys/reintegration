@@ -1,0 +1,11 @@
+name: ipfs-node
+description: IPFS node
+version: 0.1.39
+swarmKey: "0472d6ec079252b82ba680c6b0e811c529d2dfa99f92cb7d13b5ad560ae10d7c"
+nodes:
+  ipfs-node-alpha: "12D3KooWL2A1zj6oqVSRtanyZGDwJaEApxcg1JDAaCRbLayQ3aFd"
+  ipfs-node-bravo: "12D3KooWHQNAJ2iLFFxpvH9YwE4r9MVMrYoQ9YxiVGY5L3qTJi1w"
+  ipfs-node-charlie: "12D3KooWCG8XDMrBD8dSpEhoUhVUxAoGh3akYPVXFzKYVJ22yzQK"
+volumesSizes:
+  staging: 1Gi
+  data: 10Gi
