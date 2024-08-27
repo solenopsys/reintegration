@@ -32,6 +32,7 @@ async function genMd(dir: string, name: string) {
 
 const dir = "../../../docs";
 
-await genMd(dir, "graphene");
-await genMd(dir, "converged");
- 
+await genMd(dir, "frameworks/graphene");
+await genMd(dir, "frameworks/converged");
+await genMd(dir, "frameworks/detonation");
+await genMd(dir, "frameworks/combinator");

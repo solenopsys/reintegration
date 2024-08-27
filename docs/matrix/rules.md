@@ -1,7 +1,7 @@
 
 **Who cannot participate in the Solenopsis community**
 
-1. ** Members of Secret Organizations **  
+1. **Members of Secret Organizations**  
    Representatives of secret organizations or intelligence agencies, such as national security services, military intelligence, as well as criminal syndicates and extremist groups, are not allowed to participate in the community.
 
 2. **Active Members of Religious Organizations**  

@@ -1,0 +1,4 @@
+- Reinforced concrete foundation for installation on land.
+- Pile foundation for installation in deserts and permafrost.
+- Pontoon foundation for installation in bodies of water.
+- Volumetric tubular foundation for installation in the sea.
