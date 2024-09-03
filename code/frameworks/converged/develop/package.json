@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@solenopsys/converged-renderer": "latest",
+    "@solenopsys/converged-reactive": "latest",
+    "@solenopsys/converged-router": "latest",
+    "@solenopsys/converged-style": "latest",
+    "@types/bun": "^1.0.10",
+    "browser-resolve": "^2.0.0",
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "typescript-plugin-css-modules": "^5.1.0"
+  }
+}

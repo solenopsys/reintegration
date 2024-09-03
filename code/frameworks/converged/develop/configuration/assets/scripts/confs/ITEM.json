@@ -1,0 +1,25 @@
+{
+	"scripts": {
+		"layouts": {
+			"hexagon": "/assets/scripts/layouts/heagon.js",
+			"line": "/assets/scripts/layouts/line.js"
+		},
+		"generators": {
+			"ic": "/assets/scripts/generators/ic.js",
+			"tile": "/assets/scripts/generators/tile.js",
+			"heagSheet": "/assets/scripts/generators/heagonal.js"
+		}
+	},
+	"plan": [
+		{
+			"type": "generator",
+			"name": "heagSheet",
+			"params": {
+				"radius": 20,
+				"edgeLength": 1,
+				"sphereRadius": 6,
+				"n": 4
+			}
+		}
+	]
+}

@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "jsxImportSource": "@solenopsys/converged-renderer",
+   
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "baseUrl": "./",
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    "paths": {
+      "@solenopsys/ui-content":["./packages/solenopsys/ui-content"],
+      "@solenopsys/ui-layouts":["./packages/solenopsys/ui-layouts"],
+      "@solenopsys/ui-lists":["./packages/solenopsys/ui-lists"],
+      "@solenopsys/ui-navigate":["./packages/solenopsys/ui-navigate"],
+      "@solenopsys/ui-themes":["./packages/solenopsys/ui-themes"],
+      "@solenopsys/ui-controls":["./packages/solenopsys/ui-controls"],
+      "@solenopsys/ui-state":["./packages/solenopsys/ui-state"],
+      "@solenopsys/ui-highlight":["./packages/solenopsys/ui-highlight"],
+      "@solenopsys/ui-landing":["./packages/solenopsys/ui-landing"],
+      "@solenopsys/ui-forms":["./packages/solenopsys/ui-forms"],
+      "@solenopsys/fl-crypto":["./packages/solenopsys/fl-crypto"],
+      "@solenopsys/ui-qr":["./packages/solenopsys/ui-qr"],
+      "@solenopsys/ui-3d":["./packages/solenopsys/ui-3d"],
+      "@solenopsys/mf-visualize":["./packages/solenopsys/mf-visualize"],
+      "@solenopsys/mf-graphene":["./packages/solenopsys/mf-graphene"],
+      "@solenopsys/mf-generator":["./packages/solenopsys/mf-generator"],
+    }
+  },
+  "types": ["bun-types"]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@solenopsys/ui-navigate",
+  "module": "src/index.tsx",
+  "type": "module",
+  "dependencies": {
+    "@solenopsys/converged-reactive": "latest",
+    "@solenopsys/converged-renderer": "latest",
+    "@solenopsys/converged-style": "latest",
+    "@solenopsys/ui-controls": "workspace:../ui-controls"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.0.10"
+  },
+  "external": [
+    "@solenopsys/ui-navigate",
+    "@solenopsys/ui-controls",
+    "@solenopsys/ui-layouts"
+  ],
+  "scripts": {
+    "tests": " bun test  "
+  }
+}

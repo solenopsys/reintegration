@@ -1,0 +1,49 @@
+{
+	"module": "@solenopsys/lt-website",
+	"state": {
+		"ui": {
+			"top": "@solenopsys/ui-navigate:UiRoutePane",
+			"menu": "@solenopsys/ui-layouts:UiTreeMenu"
+		},
+		"page": {
+			"favicon": "/images/robofavicon.svg",
+			"title": "Robotization vc",
+			"logo": "/images/robotization.svg"
+		},
+		"navigation": {
+			"selected": "/",
+			"tree": [
+				
+				{
+					"id": "/docs/",
+					"title": "Documentation"
+				}
+			]
+		},
+		"routes": {
+			"/": {
+				"center": {
+					"component": "@solenopsys/mf-landing:HwLanding",
+					"props": {
+						"ipfs": "bafyreibmaufy3g6g43iszy3dzrtpi525wchzinu5ks4xhl7lhimwhqigxa"
+					}
+				},
+				"left": null
+			},
+			"/docs/": {
+				"center": {
+					"component": "@solenopsys/mf-content:MdDynamic",
+					"props": {
+						"ipfs": "bafyreidokzad4eulmm6szmgolewvtwqxx23hgl4ilo5hbnjt2uzi33o7f4"
+					}
+				},
+				"left": {
+					"component": "@solenopsys/mf-content:MainMenu",
+					"props": {
+						"ipfs": "bafyreibff6bjhlab3yqv5oo2nnctrs5asovhdnzhim6m7gfm33qzvszvqy"
+					}
+				}
+			}
+		}
+	}
+}

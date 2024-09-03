@@ -1,0 +1,32 @@
+{
+    "scripts":{
+      "layouts":{
+        "hexagon":"/assets/scripts/layouts/heagon.js",
+        "line":"/assets/scripts/layouts/line.js"
+      },
+      "generators":{
+        "ic":"/assets/scripts/generators/ic.js",
+        "tile":"/assets/scripts/generators/tile.js",
+        "heagSheet":"/assets/scripts/generators/heagonal.js"
+      }
+    },
+	"plan": [
+		{
+			"type": "generator",
+			"name": "tile",
+			"params": {
+				"radius": 10
+			}
+		},
+		{
+			"type": "layout",
+			"name": "hexagon",
+			"params": {
+				"layers": 16,
+				"gap": 18
+			}
+		}
+	]
+}
+
+

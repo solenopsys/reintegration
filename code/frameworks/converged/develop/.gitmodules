@@ -1,0 +1,3 @@
+[submodule "packages/solenopsys/fl-crypto"]
+	path = packages/solenopsys/fl-crypto
+	url = http://github.com/solenopsys/fl-crypto

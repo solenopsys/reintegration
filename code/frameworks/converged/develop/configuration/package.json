@@ -1,0 +1,17 @@
+{
+  "name": "@solenopsys/ui-configuration",
+  "module": "index.ts",
+  "type": "module",
+  "dependencies": {
+    "@solenopsys/converged-router": "latest",
+    "@solenopsys/converged-style": "latest",
+    "@solenopsys/converged-reactive": "latest",
+    "@solenopsys/converged-renderer": "latest"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "@solenopsys/converged-reactive": "latest",
+    "@solenopsys/converged-renderer": "latest",
+    "typescript": "^5.0.0"
+  }
+}

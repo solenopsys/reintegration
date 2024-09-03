@@ -1,0 +1,24 @@
+{
+  "name": "@solenopsys/converged-transport",
+  "module": "index.ts",
+  "type": "module",
+  "dependencies": {
+    "@biomejs/biome": "latest",
+    "debug": "latest",
+    "hex2dec": "latest",
+    "mkdirp": "latest",
+    "tslib": "latest",
+    "typescript": "latest"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "latest"
+  },
+  "scripts": {
+    "format": "bunx @biomejs/biome format src/**/*.ts --write",
+    "bundle-cap": "bun build  src/cap/index.ts --outfile=dist/cap.js",
+    "bundle-cap-gen": "bun build  src/cap-gen/index.ts --outfile=dist/cap-gen.js"
+  }
+}

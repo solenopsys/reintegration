@@ -1,0 +1,10 @@
+{
+	"module": "@solenopsys/lt-code",
+	"state": {
+		"page": {
+			"favicon": "/images/favicon.svg",
+			"title": "Solenopsys Authentication",
+			"logo": "/images/logo.svg"
+		}
+	}
+}

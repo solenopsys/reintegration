@@ -1,0 +1,26 @@
+{
+  "name": "@solenopsys/ui-controls",
+  "module": "index.tsx",
+  "type": "module",
+  "dependencies": {
+    "@solenopsys/converged-reactive":  "latest",
+    "@solenopsys/converged-renderer":  "latest",
+    "@solenopsys/converged-style":  "latest",
+    "@testing-library/dom": "^9.3.4",
+    "global-jsdom": "^24.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@happy-dom/global-registrator": "^14.3.6",
+    "@types/bun": "^1.0.0",
+    "happy-dom": "^14.3.6",
+    "jsdom": "^24.0.0"
+  },
+  "external": [
+    "@solenopsys/converged-ui-navigate",
+    "@solenopsys/converged-ui-controls",
+    "@solenopsys/converged-ui-layouts"
+  ]
+}

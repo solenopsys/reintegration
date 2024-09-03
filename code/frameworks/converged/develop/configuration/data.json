@@ -1,0 +1,31 @@
+{
+    "cid": "bafyreiali66aezubcw6qj5m6mrrctih4p7wrgvqe4arooh4rbctfhpwnf4",
+    "name": "Robotization Venture Capital",
+    "path": "robotization",
+    "type": "menu",
+    "articles": [
+        "bafyreiai5iqcqyvydnjp7gtezvkuubaaqb3b4kx2ikmnq7wiiaheeuw54m"
+    ],
+    "children": [
+        {
+            "cid": "bafyreidhyihy7zedzrudifnujrr5wrbjxbwrz7f6wj3gcjeoljnfenj2uu",
+            "name": "Funds",
+            "path": "subfonds",
+            "type": "menu",
+            "articles": [
+                "bafyreibsdvxcvguyqk5vgoemffcmp6s4hwlx4y3vgiom26wzcbgcktl6k4"
+            ],
+            "children": []
+        },
+        {
+            "cid": "bafyreihuij6i5uv7k65gf6hgwy5kiqnlgdlm3g252h5yvw5rvzccdcspm4",
+            "name": "Team",
+            "path": "team",
+            "type": "menu",
+            "articles": [
+                "bafyreig6ihqmog6kuk2uxjhlv453bjair22mtgp5gnrtxi6tvutyhes5ni"
+            ],
+            "children": []
+        }
+    ]
+}
