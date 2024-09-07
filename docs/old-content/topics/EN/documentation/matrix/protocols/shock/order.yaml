@@ -1,0 +1,4 @@
+include:
+  "motivation": Why create a custom protocol?
+  "structure": What are the structure of the package?
+  "architect": What is the architecture of the protocol?

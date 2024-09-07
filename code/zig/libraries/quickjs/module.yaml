@@ -1,0 +1,25 @@
+module:
+  name: quickjs
+  version: 0.0.1
+  description: QuickJS is a small and embeddable Javascript engine.
+  license: MIT
+  source: https://github.com/solenopsys/quickjs
+build:
+  params:
+    linkLibC: true
+    cSources:
+      - src/quickjs/vendor/cutils.c
+      - src/quickjs/vendor/libregexp.c
+      - src/quickjs/vendor/libunicode.c
+      - src/quickjs/vendor/libbf.c
+      - src/quickjs/vendor/quickjs.c
+    cFlags:
+      - -std=gnu99
+      - -funsigned-char
+      - -fno-sanitize=undefined
+    cMacros:
+      - name: CONFIG_VERSION
+        value: "\"2021-03-27\""
+      - name: CONFIG_BIGNUM
+        value: "1"
+ 
