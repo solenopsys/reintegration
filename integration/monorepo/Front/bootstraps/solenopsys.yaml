@@ -1,0 +1,68 @@
+module: '@solenopsys/lt-website'
+state:
+  ui:
+    top: '@solenopsys/ui-navigate:UiRoutePane'
+    menu: '@solenopsys/ui-layouts:UiTreeMenu'
+  page:
+    favicon: /images/favicon.svg
+    title: Solenopsys vc
+    logo: /images/solenopsys.svg
+  navigation:
+    selected: /
+    tree:
+      - id: /whitepaper/
+        title: Whitepaper
+      - id: /technology/
+        title: Technology
+      - id: /ecosystem/
+        title: Ecosystem
+      - id: /documentation/
+        title: Documentation
+  actions:
+    - key: /login/
+      title: Login
+      icon: login.svg
+  routes:
+    /:
+      center:
+        component: '@solenopsys/mf-landing:HwLanding'
+        props:
+          ipfs: bafyreic2gcdpjagbunz5zjojuaxedmbwgandctsvfdxmwcu2aprhluuquy
+      left: null
+    /technology/:
+      center:
+        component: '@solenopsys/mf-content:MdDynamic'
+        props:
+          ipfs: bafyreiegy3zwbucn3c2wl7t7rhsr43xu6pzgfk2b2plylcg7evngvfofla
+      left:
+        component: '@solenopsys/mf-content:MainMenu'
+        props:
+          ipfs: bafyreidcmxtmbawoiue43vzwzgg6y56y6gro7krabtej2hj3odvwltbw7m
+    /documentation/:
+      center:
+        component: '@solenopsys/mf-content:MdDynamic'
+        props:
+          ipfs: bafyreicuczqbb4g3nflos74y2pt5olzdcsn4zwtvpsbjgid2lujea6yigq
+      left:
+        component: '@solenopsys/mf-content:MainMenu'
+        props:
+          ipfs: bafyreif6iijvezrnboo4qvtr6zroptg7ag2uzx4i6vq6dzv4lirsblu47e
+    /ecosystem/:
+      center:
+        component: '@solenopsys/mf-content:MdDynamic'
+        props:
+          ipfs: bafyreig5pjth7jdhd3aji4s6vmgesxeq7j4me6wssjda7jnwumwqhx3esy
+      left:
+        component: '@solenopsys/mf-content:MainMenu'
+        props:
+          ipfs: bafyreie6fcefwfcwrvqxhztyzo77ctficcv5rw2kjrpxykkunjdlzpa3wu
+    /whitepaper/:
+      center:
+        component: '@solenopsys/mf-content:MdDynamic'
+        props:
+          ipfs: bafyreicbj53krv45c623bw42eehanjfpg2ga3fjst6rbhnjuwljyl3ufpm
+      left:
+        component: '@solenopsys/mf-content:MainMenu'
+        props:
+          ipfs: bafyreiepydovkec2yc5i73lwgiouaxuekg3fnsusea7wy5h4vikj2eujwa
+

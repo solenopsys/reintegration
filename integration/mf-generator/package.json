@@ -1,0 +1,13 @@
+{
+  "name": "@solenopsys/mf-generator",
+  "version": "0.1.0",
+  "dependencies": {
+    "three": "^0.153.0",
+    "@types/three": "^0.153.0",
+    "json5": "^2.2.3"
+  },
+  "scripts": {
+    "build": "vite build  -c ../../../lib.config.js"
+  },
+  "type": "module"
+}

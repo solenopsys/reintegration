@@ -1,0 +1,32 @@
+module: '@solenopsys/lt-website'
+state:
+  ui:
+    top: '@solenopsys/ui-navigate:UiRoutePane'
+    menu: '@solenopsys/ui-layouts:UiTreeMenu'
+  page:
+    favicon: /images/favicon.svg
+    title: Solenopsys vc
+    logo: /images/solenopsys.svg
+  navigation:
+    selected: /stl/
+    tree:
+      - id: /stl/
+        title: Stl
+      - id: /graphene/
+        title: Graphene
+      - id: /combinatorics/
+        title: Combinatorics
+  routes:
+    /stl/:
+      center:
+        component: '@solenopsys/mf-visualize:Visual'
+        props:
+          file: /assets/3d/USB3.3MF
+          texture: /assets/3d/blouberg_sunrise_2_1k.hdr
+    /graphene/:
+      center:
+        component: '@solenopsys/mf-graphene:Ocean3D'
+    /combinatorics/:
+      center:
+        component: '@solenopsys/mf-generator:TechnologyComponent'
+
