@@ -1,5 +1,15 @@
 ###  Organic
 
+В начале было слово и это слово было "Органик". 
+o - символ бесконечности 
+Из этого слова и появилось все остальное. 
+
+
+Инь и янь 
+Zig и TS
+Zig - жесткое и быстрое (для системных задач компилируемое)
+TS - гибкое и мощное (для бизнес логики скриптовое)
+
 **Introduction**  
 Framework.Organic is a revolutionary next-generation glue tool system designed for managing decentralized infrastructure based on Solenopsis. This system combines ultra-compact design with flexibility, offering powerful capabilities for management and expansion.
 
