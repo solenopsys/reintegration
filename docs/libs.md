@@ -9,6 +9,10 @@ https://github.com/litespeedtech/lsquic
 LZ4
 zlib
 https://boringssl.googlesource.com/boringssl
- 
 
+
+XDP: Как уже обсуждалось, XDP — это хорошая альтернатива для Raspberry Pi. 
+AF_XDP: AF_XDP (сокеты XDP) также может быть использован на Raspberry Pi, 
  HDFS изучить и GOOGLE
+ Плагины для HPC
+  RDMA Nvlink GPUDirect NVSwitch

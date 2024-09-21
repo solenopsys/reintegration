@@ -4,10 +4,10 @@ pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
 
     // Путь к блочному устройству
-    const device_path = "/dev/nvme0n1p4"; // Замените на путь к вашему устройству
+    const device_path = "/dev/mapper/test1"; // Замените на путь к вашему устройству
 
     // Размер блока (например, 512 байт для большинства дисков)
-    const block_size: usize = 512;
+    const block_size: usize = 4096;
 
     // Смещение для чтения (например, начало устройства - 0)
     const offset: u64 = 0;

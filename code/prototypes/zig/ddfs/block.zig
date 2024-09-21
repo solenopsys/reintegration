@@ -24,7 +24,7 @@ fn getBlockSize(file_handle: std.fs.File.Handle) !usize {
     var block_size: usize = 0;
 
     // Выполнить ioctl
-    const result = std.os..ioctl(file_handle, BLKSSZGET, &block_size);
+    const result = std.os.ioctl(file_handle, BLKSSZGET, &block_size);
     if (result != 0) {
         return error.IoError;
     }
