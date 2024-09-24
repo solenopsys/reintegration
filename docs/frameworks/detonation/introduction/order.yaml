@@ -1,30 +1,12 @@
 
 include:
-  about: "Что такое Detonation?"
+  about: Что представляет собой ваш продукт? (Кратко опишите суть и назначение вашего фреймворка или технологии.)
+  problem: Какую проблему он решает? (Объясните, какие конкретные задачи или боли пользователей вы устраняете. )
+  benefits: В чем его уникальные преимущества? (Подчеркните особенности, которые отличают ваш продукт от конкурентов.)
+  для кого: Кто ваша целевая аудитория? (Укажите, для кого предназначен ваш продукт: разработчики, предприятия, стартапы и т.д.)
+ 
 
 
-Что делает твой фреймворк уникальным?
-Для чего он предназначен? Какие проблемы решает?
-Какие принципы (например, простота, производительность) лежат в его основе?
-Для кого он создан? (например, для начинающих разработчиков или опытных специалистов)
-
-
-Уникальная цель фреймворка: какую проблему он решает, и почему он лучше других решений?
-Ключевые особенности и принципы: простота, производительность, гибкость.
-
-  purpose_short: "What will the Detonation framework be used for?"
-  mission: "What advantages does Detonation provide?"
-  compute: "What is Detonation?"
-  difference: "What is the difference?"
-  advantages: "What are the advantages?"
-  performance: "What is the performance like?"
-  scalability: "Is scalability possible?"
-  efficiency: "How is efficiency ensured?"
-  compatibility: "How is compatibility ensured?"
-  industrial: "What are the benefits for industrial use?"
-  accelerators: "What accelerators can be used in Detonation?"
-  architect: "What architectures are there?"
-  purpose: "What will the Detonation framework be used for?"
 
  
 

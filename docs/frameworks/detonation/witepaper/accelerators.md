@@ -1,6 +1,6 @@
 ### Types of Accelerators
 
-MicroKernels can interact with various types of accelerators, provided the necessary drivers are available. Here are
+ComputeSet can interact with various types of accelerators, provided the necessary drivers are available. Here are
 some examples:
 
 - **CPU** - Standard Processor

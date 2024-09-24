@@ -1,5 +1,3 @@
-Here's a more structured and refined version of your text:
-
 ### Differences from Kubernetes
 
 Kubernetes orchestrates containers in clusters, using microservices architecture with direct HTTP or TCP connections.

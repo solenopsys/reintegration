@@ -1,3 +1,8 @@
-# Detonation
 
-Ultra fast, distributed, and scalable computational framework for data processing in a decentralized environment.
+### Detonation
+
+A ultra-lightweight and ultra-fast computing framework for modern industrial applications. 
+
+
+
+

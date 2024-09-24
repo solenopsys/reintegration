@@ -61,7 +61,7 @@ Here are a couple more examples:
 
 ### Architect
 Built upon computational
-microkernels, high-performance queues, and task routing using Directed Acyclic Graphs (DAGs).
+ComputSets, high-performance queues, and task routing using Directed Acyclic Graphs (DAGs).
 At its core, Detonation utilizes a proprietary implementation of DAGs for data stream processing. 
 
 
@@ -130,7 +130,7 @@ Detonation is a meta-framework, which means it relies on the higher-level Kubern
 
 ### Types of Accelerators
 
-MicroKernels can interact with various types of accelerators, provided the necessary drivers are available. Here are
+ComputSets can interact with various types of accelerators, provided the necessary drivers are available. Here are
 some examples:
 
 - **CPU** - Standard Processor
@@ -145,7 +145,7 @@ some examples:
 
 ![sheme.svg](./content/images/detonation/sheme.svg)
 
-### MicroKernel Applications
+### ComputSet Applications
 
 A Detonation application is composed of multiple separate applications (micro-kernels) that, during assembly, are
 packaged into Linux containers. The deployment of these cellular applications can occur in a single cluster or across a
@@ -194,8 +194,8 @@ conversion within StreamGates.
 **HostRouter** - Manages the computational process of tasks. They enable interaction between multiple micro frontends
 and microservices, directing message flows via WebSockets, crucial for real-time event display.
 
-**Microkernels** - Specialized containers for data processing, akin to AWS lambda functions. ZeroMQ technology is used
-for data exchange between microkernels. Within a single node (computer), data exchange can reach speeds of three million
+**ComputSets** - Specialized containers for data processing, akin to AWS lambda functions. ZeroMQ technology is used
+for data exchange between ComputSets. Within a single node (computer), data exchange can reach speeds of three million
 messages per second with a transfer delay of approximately 5 microseconds.
 
 **SHOCK Protocol** - Frontend and backend data exchange is conducted through message streams. This involves using
@@ -204,12 +204,12 @@ WebSockets for the frontend and ZeroMQ within the cluster.
 
 
 
-### Advantages of MicroKernel Architecture
-- **Easy Scalability** - Microkernels can be deployed flexibly, adapting to changing load demands.
-- **Resource Limitation** - Each microkernel can be restricted in terms of resource usage.
+### Advantages of ComputSet Architecture
+- **Easy Scalability** - ComputSets can be deployed flexibly, adapting to changing load demands.
+- **Resource Limitation** - Each ComputSet can be restricted in terms of resource usage.
 - **Resource Usage Monitoring** - Allows tracking of computational resources expended during task processing.
 - **Language Independence** - Different parts of the program can be written in various programming languages.
-- **Code Reusability** - Microkernels can be reused across different applications, enhancing efficiency.
+- **Code Reusability** - ComputSets can be reused across different applications, enhancing efficiency.
 
 
 # Purpose

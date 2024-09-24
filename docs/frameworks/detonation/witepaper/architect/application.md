@@ -1,4 +1,4 @@
-### MicroKernel Applications
+### ComputSet Applications
 
 A Detonation application is composed of multiple separate applications (micro-kernels) that, during assembly, are
 packaged into Linux containers. The deployment of these cellular applications can occur in a single cluster or across a
