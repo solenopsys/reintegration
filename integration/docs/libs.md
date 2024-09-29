@@ -17,5 +17,5 @@ AF_XDP: AF_XDP (сокеты XDP) также может быть использ�
   . TLSF (Two-Level Segregated Fit)++
 
   Slice - image format
-  Slim - operation system
+
   Fuze - bootloader 

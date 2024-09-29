@@ -18,7 +18,7 @@ For example, the kernel layer is taken first, and then each subsequent library a
 
 Packages are stored on the decentralized platform Expansion and are created using the standard Slice system. A single configuration point based on a TypeScript config wraps standard package settings and integrates closely with the OS build configuration, allowing precise control over the build parameters of individual packages according to kernel settings.
 
-### Bootloader
+### Bootloader Fuze
 
 A custom bootloader provides instant kernel switching. Using the SDFS file system, it allows quick transitions to a new version and automatic rollback in case of failure.
 
