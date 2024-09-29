@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Person",
+    "fields": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "age",
+        "type": "integer8"
+      }
+    ],
+    "nodeType": "struct",
+    "pack": "4234234223"
+  },
+  {
+    "fields": [
+      
+      {
+        "type": "bit8",
+        "offset": 2
+      }
+    ],
+    "pointers":{
+      {
+        "type": "byte[]",
+        "offset": 1
+      },
+    },
+    "dataWordCount": 1,
+    "pointerCount": 1
+  }
+]
