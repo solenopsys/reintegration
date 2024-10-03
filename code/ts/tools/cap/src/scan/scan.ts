@@ -1,5 +1,6 @@
-import { Project, Type, Symbol, TypeAliasDeclaration, SourceFile } from "ts-morph"
+import { Project, Type, Symbol, TypeAliasDeclaration, SourceFile, CommentRange } from "ts-morph"
 import { ts } from "ts-morph";
+import type { Declaration } from "typescript";
 
 const FIELDS_TYPES = [
   ts.TypeFlags.Number,
@@ -20,7 +21,7 @@ export type StructField = {
 }
 
 export type StructLink = {
-  value: object;
+  value: any;
   type: string;
 }
 
@@ -40,6 +41,18 @@ export type Config = {
   structs: StructObject[];
 }
 
+function checkType(flag: any, propType: ts.TypeFlags): boolean {
+  return (flag & propType) !== 0
+}
+
+function decodeType(type: ts.TypeFlags, labels: string[]): string {
+  if (checkType(ts.TypeFlags.Number, type)) return labels.length > 0 ? labels[0] : "i32";
+  if (checkType(ts.TypeFlags.Boolean, type)) return "boolean"
+  if (checkType(ts.TypeFlags.String, type)) return "string"
+  if (checkType(ts.TypeFlags.Object, type)) return "object"
+  return "undefined";
+}
+
 // Функция для извлечения схемы из TypeScript файла
 export function extractSchema(filePath: string): Config {
   const project = new Project();
@@ -57,41 +70,43 @@ export function extractSchema(filePath: string): Config {
   return { structs };
 }
 
+
+
 function processTypeAlias(source: SourceFile, typeName: string): StructObject {
+  console.log("NAME",typeName);
   const typeAlias = source.getTypeAliasOrThrow(typeName);
   const name = typeAlias.getName();
   const type = typeAlias.getType();
   const properties = type.getProperties();
-
   const { fields, links } = processProperties(properties);
-
+  console.log("END",fields);
   return { name, fields, links };
 }
 
-// // Find the type alias "Person"
-// 
+function extractCommentLabels(comments: CommentRange[]): string[] {
+  let commentString = "";
+  comments.forEach(comment => {
+    commentString += comment.getText();
+  });
 
-// // Get the leading comments of the type alias (including `//` and `/** ... */`)
-// const leadingComments = typeAlias.getLeadingCommentRanges();
+  const regex = /@([^@\s]+)/g
+  const matches = commentString.match(regex)?.map(match => match.replace("@", ""));
+  return matches || [];
+}
 
-// // Print out all leading comments
-// leadingComments.forEach(comment => {
-//     console.log(comment.getText());
-// });
 
-// // You can also get comments for properties inside the type alias
-// typeAlias.getType().getProperties().forEach(property => {
-//     const declaration = property.getDeclarations()[0];
-//     if (declaration) {
-//         const comments = declaration.getLeadingCommentRanges();
-//         console.log(`Comments for property ${property.getName()}:`);
-//         comments.forEach(comment => console.log(comment.getText()));
-//     }
-// });
+
+
 function processProperties(properties: Symbol[]): { fields: StructField[], links: StructLink[] } {
   let fields: StructField[] = [];
   let links: StructLink[] = [];
+
+ 
+
+  let order = 0;
+  console.log("ORDER",order);
   for (const property of properties) {
+  
     const propName = property.getName();
     const declarations = property.getDeclarations();
 
@@ -101,20 +116,23 @@ function processProperties(properties: Symbol[]): { fields: StructField[], links
 
     const declaration = declarations[0];
     const propType = declaration.getType();
-    const comment = declaration.getLeadingCommentRanges();
 
-   
-    if (FIELDS_TYPES.find(flag => flag & propType.getFlags())) {
+    const labels = extractCommentLabels(declaration.getTrailingCommentRanges())
+
+    if (FIELDS_TYPES.find(flag => checkType(flag, propType.getFlags()))) {
+      order += 1;
       fields.push({
         name: propName,
-        type: "string",
-        order: 1
+        type: decodeType(propType.getFlags(), labels),
+        order: order
       });
     }
-    else if (LINKS_TYPES.find(flag => flag & propType.getFlags())) {
+    else if (LINKS_TYPES.find(flag => checkType(flag, propType.getFlags()))) {
+
+
       links.push({
         value: propName,
-        type: "string"
+        type: decodeType(propType.getFlags(), labels),
 
       });
     }
@@ -123,42 +141,4 @@ function processProperties(properties: Symbol[]): { fields: StructField[], links
 }
 
 
-
-
-
-// comment.forEach(c => {
-//   console.log(c.getText());
-// });
-
-// console.log("COMMENT", propType);
-
-// if (!propType) {
-//   return null;
-// }
-
-// // Получаем строковое представление типа
-// let type: string;
-
-// // Создайте переключатель или просто извлеките название типа
-// switch (propType.getFlags()) {
-//   case ts.TypeFlags.String:
-//     type = "string";
-//     break;
-//   case ts.TypeFlags.Number:
-//     type = "i32";
-//     break;
-//   case ts.TypeFlags.Boolean:
-//     type = "boolean";
-//     break;
-//   // Добавьте другие типы по необходимости
-//   default:
-//     type = propType.getText(); // Используем общее текстовое представление типа
-// }
-
-// return {
-//   name: propName,
-//   type,
-//   order
-// };
-//   }
 

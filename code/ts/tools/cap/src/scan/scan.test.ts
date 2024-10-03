@@ -49,16 +49,20 @@ test("Check fields", () => {
   expect(person.links.length).toBe(1);
 });
 
-// test("Check fields types", () => {
-//   const school = schema.structs[0];
+test("Check fields types", () => {
+  const school = schema.structs[0];
 
-//   expect(school.fields[0].name).toBe("id");
-//   expect(school.fields[0].type).toBe("i32");
+  expect(school.fields[0].name).toBe("id");
+  expect(school.fields[0].type).toBe("i32");
 
-//   expect(school.fields[1].name).toBe("name");
-//   expect(school.fields[1].type).toBe("string");
-  
-// });
+  expect(school.links[0].value).toBe("name");
+  expect(school.links[0].type).toBe("string");
+
+  const person = schema.structs[1];
+  expect(person.fields[0].name).toBe("age");
+  expect(person.fields[0].type).toBe("u8");
+
+});
 
 
 
