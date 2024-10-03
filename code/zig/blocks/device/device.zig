@@ -1,32 +1,14 @@
 const std = @import("std");
-
-pub fn BlockDeviceInterface(comptime T: type) type {
-    return struct {
-        fn open(self: *void) !void {
-            return T.open(self);
-        }
-
-        fn close(self: *void) void {
-            return T.close(self);
-        }
-
-        fn read(self: *void, offset: u64, buffer: []u8) !usize {
-            return T.read(self, offset, buffer);
-        }
-
-        fn write(self: *void, offset: u64, buffer: []u8) !usize {
-            return T.write(self, offset, buffer);
-        }
-
-        fn blockSize(self: *void) !usize {
-            return T.blockSize(self);
-        }
-    };
-}
+const testing = std.testing;
 
 const BlockDevice = struct {
     path: []const u8,
-    current: std.File,
+
+    pub fn init(path: []const u8) !BlockDevice {
+        return BlockDevice{
+            .path = path,
+        };
+    }
 
     pub fn open(self: *BlockDevice) void {
         self.current = try std.fs.cwd().openFile(self.path, .{});
@@ -53,4 +35,23 @@ const BlockDevice = struct {
         }
         return block_size;
     }
+
+    pub fn deviceSize(self: *BlockDevice) !usize {
+        const BLKGETSIZE64 = 0x8004;
+        var device_size: usize = 0;
+        const result = std.os.ioctl(self.current.handle, BLKGETSIZE64, &device_size);
+        if (result != 0) {
+            return error.IoError;
+        }
+        return device_size;
+    }
 };
+
+// test "BlockDevice - check block size" {
+//     const bd = BlockDevice.init("/dev/sda");
+//     try bd.open();
+//     defer bd.close();
+
+//     try testing.expectEqual(@as(usize, 512), bd.blockSize());
+//     try testing.expectEqual(@as(usize, 512 * 8), bd.deviceSize());
+// }

@@ -5,8 +5,8 @@ pub fn BlockBufferedInterface(
     comptime T: type,
 ) type {
     return struct {
-        fn init(self: *void, allocator: *std.mem.Allocator, path: []const u8, block_size: usize) !void {
-            return T.init(self, allocator, path, block_size);
+        fn init(blockDevice: device.BlockDeviceInterface, allocator: *std.mem.Allocator, path: []const u8, block_size: usize) !void {
+            return T.init(blockDevice, allocator, path, block_size);
         }
         fn readBlock(self: *void, allocator: *std.mem.Allocator, block_number: u64) ![]u8 {
             return T.readBlock(self, allocator, block_number);
@@ -26,7 +26,6 @@ const BlockDeviceBuffered = struct {
     pub fn init(
         blockDevice: device.BlockDeviceInterface,
         allocator: *std.mem.Allocator,
-        path: []u8,
         block_size: usize,
     ) !BlockDeviceBuffered {
         try device.open();
