@@ -28,9 +28,10 @@ export enum FieldType {
     Array = 'array',
     Union = 'union', // several types and one active
     Group = 'group', // sub felds group
-    Void = 'void',
+  //  Void = 'void',
 }
 
+ 
 export interface Node<T extends NodeType>  {
     name : string;
     nodeType: T;

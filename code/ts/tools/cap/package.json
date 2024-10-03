@@ -2,6 +2,10 @@
   "name": "cap",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "generate": "bun run src/shema-generator.ts",
+     "test": "bun test"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
